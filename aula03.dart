@@ -4,6 +4,8 @@ void main() {
 
   if (nota < 5) {
     print("Reprovado");
+  } else {
+    print("Aprovado");
   }
 
   print("Fim do processamento");
