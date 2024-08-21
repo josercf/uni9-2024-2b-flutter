@@ -56,5 +56,30 @@ void main() {
     print("O valor de i é: $i");
   }
 
+  print("****************Imprimindo somente pares***********************");
+
+  for (int i = 0; i < 10; i += 2) {
+    print("O valor de i é: $i");
+  }
+
+  print("****************Imprimindo decrescente***********************");
+
+  for (int i = 10; i >= 0; i--) {
+    print("O valor de i é: $i");
+  }
+
+  print("****************Imprimindo pares decrescente***********************");
+
+  for (int i = 10; i >= 0; i -= 2) {
+    print("O valor de i é: $i");
+  }
+
+  print(
+      "****************Imprimindo ímpares decrescente***********************");
+
+  for (int i = 9; i >= 0; i -= 2) {
+    print("O valor de i é: $i");
+  }
+
   print("Fim do processamento");
 }
