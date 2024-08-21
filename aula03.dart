@@ -1,6 +1,6 @@
 void main() {
   double nota = 7;
-  int faltas = 11;
+  int faltas = 8;
 
   //< 5: REPROVADO
   //Entre 5 e 7 RECUPERAÇÃO
@@ -14,10 +14,39 @@ void main() {
     print("Aprovado");
   }
 
+  if (nota < 5) {
+    print("If statement: Reprovado");
+  } else {
+    print("If statement: Aprovado");
+  }
+
   //Exemplo de ternário
 
-  String info = nota >= 7 && faltas <= 10 ? "Aprovado" : "Reprovado";
+  String info = nota < 5 ? "Reprovado" : "Aprovado";
   print("Resultado do ternário: $info");
+
+  print("***************************************");
+  print("**************SWITCH*******************");
+  print("***************************************");
+  String botao = "Y";
+
+  switch (botao) {
+    case "X":
+      print("Pular");
+      break;
+    case "Y":
+      print("Agachar");
+      break;
+    case "B":
+      print("Atirar");
+      break;
+    case "A":
+      print("Bater");
+      break;
+    default:
+      print("botão inexistente!");
+      break;
+  }
 
   print("Fim do processamento");
 }
