@@ -1,10 +1,9 @@
 import 'dart:io';
 
 void main() {
-  bool calcularProximaNota = true;
+  bool calcularProximaNota = false;
 
-  while (calcularProximaNota) {
-    
+  do {
     String nomeAluno = coletarNomeAluno();
     double notaCheckpoint = coletarNotaCheckpoint();
     double notaProva = coletarNotaProva();
@@ -16,7 +15,8 @@ void main() {
     String resposta = stdin.readLineSync()!;
 
     calcularProximaNota = resposta == 'S' || resposta == 's';
-  }
+  } while (calcularProximaNota);
+  print('Fim do programa');
 }
 
 String coletarNomeAluno() {
@@ -31,12 +31,14 @@ double coletarNotaCheckpoint() {
   return notaCheckpoint;
 }
 
+/// Coleta a nota da prova
 double coletarNotaProva() {
   print('Digite a nota da prova:');
   double notaProva = double.parse(stdin.readLineSync()!);
   return notaProva;
 }
 
+/// Calcula a média ponderada da av1
 double calcularAv1(double notaCheckpoint, double notaProva) {
   const double pesoCheckpoint = 0.4;
   const double pesoProva = 0.6;
